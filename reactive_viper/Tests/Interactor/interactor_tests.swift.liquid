@@ -1,0 +1,14 @@
+@testable import {{ module_info.project_name }}
+import XCTest
+import Cuckoo
+
+class {{ module_info.name }}InteractorTests: XCTestCase {
+
+  var interactor: {{ module_info.name }}Interactor!
+
+  override func setUp() {
+    super.setUp()
+
+    interactor = {{ module_info.name }}Interactor()
+  }
+}

@@ -1,0 +1,22 @@
+import UIKit
+import RxSwift
+import RxCocoa
+
+class {{ module_info.name }}ViewController: UIViewController {
+
+  var output: {{ module_info.name }}ViewOutput!
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupRx()
+    setupInitialState()
+  }
+
+  fileprivate func setupRx() {
+    output.viewIsReady()
+  }
+
+  func setupInitialState() {
+    
+  }
+}

@@ -1,0 +1,22 @@
+@testable import {{ module_info.project_name }}
+import XCTest
+import Cuckoo
+
+class {{ module_info.name }}PresenterTest: XCTestCase {
+
+  var presenter: {{ module_info.name }}Presenter!
+  var interactor: Mock{{ module_info.name }}InteractorInput!
+  var router: Mock{{ module_info.name }}RouterInput!
+
+  override func setUp() {
+    super.setUp()
+
+    presenter = {{ module_info.name }}Presenter()
+    
+    interactor = Mock{{ module_info.name }}InteractorInput()
+    presenter.interactor = interactor
+    
+    router = Mock{{ module_info.name }}RouterInput()
+    presenter.router = router
+  }
+}
