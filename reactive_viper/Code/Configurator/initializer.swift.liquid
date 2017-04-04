@@ -2,7 +2,6 @@ import UIKit
 
 class {{ module_info.name }}ModuleInitializer: NSObject {
 
-  //Connect with object on storyboard
   @IBOutlet weak var {{ module_info.name | downcase }}ViewController: {{ module_info.name }}ViewController!
 
   override func awakeFromNib() {
