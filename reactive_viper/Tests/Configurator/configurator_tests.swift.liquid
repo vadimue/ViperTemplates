@@ -22,6 +22,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
     guard let presenter: {{ module_info.name }}Presenter = viewController.output as? {{ module_info.name }}Presenter
       else { XCTFail(); return }
+    XCTAssertNotNil(presenter.view, "view in {{ module_info.name }}Presenter is nil after configuration")
     XCTAssertNotNil(presenter.router, "router in {{ module_info.name }}Presenter is nil after configuration")
     XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not {{ module_info.name }}Router")
 

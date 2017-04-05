@@ -3,9 +3,12 @@ import RxSwift
 
 class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput, {{ module_info.name }}ViewOutput {
 
+  weak var view: {{ module_info.name }}ViewInput!
   var interactor: {{ module_info.name }}InteractorInput!
   var router: {{ module_info.name }}RouterInput!
 
   func viewIsReady() {
+
+    view.presenterIsReady()
   }
 }

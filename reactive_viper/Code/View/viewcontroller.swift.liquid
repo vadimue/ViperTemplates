@@ -2,21 +2,22 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class {{ module_info.name }}ViewController: UIViewController {
+class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewInput {
 
   var output: {{ module_info.name }}ViewOutput!
-
+  let disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupRx()
-    setupInitialState()
-  }
-
-  fileprivate func setupRx() {
     output.viewIsReady()
   }
 
-  func setupInitialState() {
+  private func setupRx() {
+    
+  }
+
+  func presenterIsReady() {
     
   }
 }
