@@ -5,6 +5,7 @@ import Cuckoo
 class {{ module_info.name }}PresenterTest: XCTestCase {
 
   var presenter: {{ module_info.name }}Presenter!
+  var view: Mock{{ module_info.name }}ViewInput!
   var interactor: Mock{{ module_info.name }}InteractorInput!
   var router: Mock{{ module_info.name }}RouterInput!
 
@@ -13,6 +14,9 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
 
     presenter = {{ module_info.name }}Presenter()
     
+    view = Mock{{ module_info.name }}ViewInput()
+    presenter.view = view
+
     interactor = Mock{{ module_info.name }}InteractorInput()
     presenter.interactor = interactor
     
