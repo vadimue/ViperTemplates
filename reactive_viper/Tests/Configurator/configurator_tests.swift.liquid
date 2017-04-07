@@ -25,17 +25,8 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
     XCTAssertNotNil(presenter.view, "view in {{ module_info.name }}Presenter is nil after configuration")
     XCTAssertNotNil(presenter.router, "router in {{ module_info.name }}Presenter is nil after configuration")
     XCTAssertTrue(presenter.router is {{ module_info.name }}Router, "router is not {{ module_info.name }}Router")
-
-    guard let interactor: {{ module_info.name }}Interactor = presenter.interactor as? {{ module_info.name }}Interactor
-      else { XCTFail(); return }
   }
 
   class {{ module_info.name }}ViewControllerMock: {{ module_info.name }}ViewController {
-
-    var setupInitialStateDidCall = false
-
-    override func setupInitialState() {
-      setupInitialStateDidCall = true
-    }
   }
 }
