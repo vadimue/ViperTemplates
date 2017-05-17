@@ -25,9 +25,6 @@ code_files:
 - {name: Router/RouterInput.swift, path: Code/Router/router_input.swift.liquid}
 - {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
 
-# Model layer
-- {name: Models/Endpoint.swift, path: Code/Models/endpoint.swift.liquid}
-
 # Configurator
 - {name: Configurator/Configurator.swift, path: Code/Configurator/configurator.swift.liquid}
 - {name: Configurator/Initializer.swift, path: Code/Configurator/initializer.swift.liquid}

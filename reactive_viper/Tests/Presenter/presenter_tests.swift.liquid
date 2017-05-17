@@ -22,5 +22,13 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
     
     router = Mock{{ module_info.name }}RouterInput()
     presenter.router = router
+
+    stub(view) { (mock) in
+      mock.presenterIsReady().thenDoNothing()
+    }
+  }
+
+  private func viewIsReady() {
+    presenter.viewIsReady()
   }
 }
